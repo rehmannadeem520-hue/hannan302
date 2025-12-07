@@ -10,3 +10,9 @@
 hanna979/hanna979 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+createjs.Sound.on("fileload", handleLoadComplete);
+createjs.Sound.alternateExtensions = ["mp3"];
+createjs.Sound.registerSound({src:"path/to/sound.ogg", id:"sound"});
+function handleLoadComplete(event) {
+	createjs.Sound.play("sound");
+}
